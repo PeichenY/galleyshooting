@@ -63,7 +63,7 @@ class ArrayBoom extends Phaser.Scene {
         my.sprite.hippo = this.add.sprite(game.config.width/2, 80, "hippo");
         my.sprite.hippo.setScale(0.25);
         my.sprite.hippo.setDepth(1);
-        my.sprite.hippo.scorePoints = 25;
+        my.sprite.hippo.scorePoints = 250;
         my.sprite.hippo.velocity = Phaser.Math.Between(-10,10);
 
         my.sprite.Boss = this.add.sprite(-100, -100, "Boss");
@@ -309,6 +309,10 @@ class ArrayBoom extends Phaser.Scene {
         this.my.sprite.hippo.x = game.config.width / 2;
         this.my.sprite.hippoBullets.forEach(bullet => bullet.destroy());
         this.my.sprite.hippoBullets = [];
+
+        this.my.sprite.hippoHorizontal.x = game.config.width / 2;
+        this.my.sprite.hippoBulletsHorizontal.forEach(bullet => bullet.destroy());
+        this.my.sprite.hippoBulletsHorizontal = [];
     
         
     }

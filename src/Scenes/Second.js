@@ -283,13 +283,9 @@ class Second extends Phaser.Scene {
 
 
             if (this.myScore >= 100) {
-                this.scene.start('GameOver'); 
+                this.scene.start('gameOver'); 
             }
         }
-        
-
-        
-
 
         // Make all of the bullets move
         for (let bullet of my.sprite.bullet) {
@@ -360,6 +356,10 @@ class Second extends Phaser.Scene {
         this.my.sprite.hippo.x = game.config.width / 2;
         this.my.sprite.hippoBullets.forEach(bullet => bullet.destroy());
         this.my.sprite.hippoBullets = [];
+
+        this.my.sprite.hippoHorizontal.x = game.config.width / 2;
+        this.my.sprite.hippoBulletsHorizontal.forEach(bullet => bullet.destroy());
+        this.my.sprite.hippoBulletsHorizontal = [];
     
         
     }
